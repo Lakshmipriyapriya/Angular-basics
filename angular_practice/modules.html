@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Modules
+	</title>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+<script src="./bootstrap/js/jquery.min.js"></script>
+	<script src="./angular.min.js"></script>
+</head>
+<body>
+	<!-- <p>using arrays</p>
+	<div ng-app="" ng-init="person={firstname:'Lakshmi',middlename:'priya',lastname:'k.v'}">
+	 	<p>example with using ng-bind:<sapan ng-bind="person.firstname"></sapan></p>
+	 </div> -->
+	  
+	<!-- <div ng-app="sampleapp">
+		<p>This is basic example of the myapp </p>
+	</div>
+		
+	<script >
+		var app=angular.Module("sampleapp",[]);
+	</script> -->
+<!-- <div ng-app="myapp" ng-controller="mycontrol">
+	<p>{{firstname+lastname}}</p>
+</div>
+	<script >
+		var app= angular.module("myapp",[]);
+		app.controller("mycontrol",function($scope){
+			$scope.firstname="priya";
+			$scope.lastname="k.v";
+	});
+	</script> -->
+	<div ng-app="myapp" www-fb-com></div>
+	<script>
+		var app=angular.module("myapp",[]);
+		app.directive("wwwFbCom",function(){
+			return{
+				template:"this Modules will be return"
+			}
+			
+		})
+	</script>
+</body>
+</html>

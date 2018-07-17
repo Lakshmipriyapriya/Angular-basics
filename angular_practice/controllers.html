@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Controllers
+	</title>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+<script src="./bootstrap/js/jquery.min.js"></script>
+	<script src="./angular.min.js"></script>
+</head>
+<body>
+	<!-- <div ng-app="myapp" ng-controller="myctrl">
+		firstname:<input type="text" ng-model="firstname"><br>
+
+		secondname:<input type="text" ng-model="secondname"><br>
+		<br>
+		full name:{{firstname+" "+secondname}}
+		
+	</div>
+	<script>
+		var app=angular.module('myapp',[])
+			app.controller("myctrl",function($scope){
+				$scope.firstname='priya';
+				$scope.secondname='k.v';
+
+
+		})
+			
+	</script>
+ -->
+ <div ng-app="myapp" ng-controller="myctrl">
+		firstname:<input type="text" ng-model="firstname"><br>
+
+		secondname:<input type="text" ng-model="secondname"><br>
+		<br>
+		full name:{{fullname()}}
+		
+	</div>
+	<script>
+		var app=angular.module('myapp',[])
+			app.controller("myctrl",function($scope){
+				$scope.firstname='priya';
+				$scope.secondname='k.v';
+				$scope.fullname=function(){
+					return $scope.firstname+""+$scope.secondname
+				}
+
+
+		})
+			
+	</script>
+
+</body>
+</html>

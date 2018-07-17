@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Http
+	</title>
+</head>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+<script src="../bootstrap/js/jquery.min.js"></script>
+	<script src="../angular.min.js"></script>
+<body>
+	<div ng-app="myApp" ng-controller="myctrl">
+		{{mywelcome}}
+
+	</div>
+<script>
+	var app=angular.module('myApp',[]);
+	app.controller('myctrl',function($scope,$http){
+		$http.get("welcome.html").then(function(response){
+			$scope.mywelcome=response.data;
+		});
+	});
+</script>
+
+
+</body>
+</html>

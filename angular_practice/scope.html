@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Scope
+	</title>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+<script src="./bootstrap/js/jquery.min.js"></script>
+	<script src="./angular.min.js"></script>
+</head>
+<!-- <body>
+	<p>use of this scope is when we the controller we pass the scope as an argument</p> -->
+	<!-- <div ng-app="myApp" ng-controller="ctrl">
+		{{myfullname}}
+	</div>
+	<script>
+	var app = angular.module("myApp",[])
+	app.controller("ctrl",function($scope)
+	{
+		$scope.myfullname='priya';
+	})
+</script> -->
+<!-- <div ng-app="myApp" ng-controller="ctrl">
+	<input ng-model="myfullname">
+		<p>my name is:{{myfullname}}</p>
+	</div>
+	<script>
+	var app = angular.module("myApp",[])
+	app.controller("ctrl",function($scope)
+	{
+		$scope.myfullname='priya.k.v';
+	})
+</script> -->
+<body ng-app="myApp">
+
+<p>here the rootscope color will get printed</p>
+<h1>{{color}}</h1>
+
+<div ng-controller="myCtrl">
+    <p>Here the scope color will get printed:</p>
+    <h1>{{color}}</h1>
+</div>
+
+<p>Again rootscope color will print:</p>
+<h1>{{color}}</h1>
+
+<script>
+var app = angular.module('myApp', []);
+app.run(function($rootScope) {
+    $rootScope.color = 'blue';
+});
+app.controller('myCtrl', function($scope) {
+    $scope.color = "red";
+});
+</script>
+
+</body>
+</html>

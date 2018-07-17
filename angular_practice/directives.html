@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Directives
+	</title>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+<script src="./bootstrap/js/jquery.min.js"></script>
+	<script src="./angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+	<!-- <div ng-app="" ng-init="firstanme='Priya'">
+<p>name:<input type="text" ng-model="firstanme"></p>
+	<p>{{firstname}}</p>
+</div> -->
+<!-- <div ng-app="" ng-init="num1=5;num2=10">
+FirstNumber<input type="text" ng-model="num1"><br>
+SecondNumber<input type="text" ng-model="num2">
+	<p>The output is:{{num1+num2}}</p>
+</div> -->
+<!-- <div ng-app="" ng-init="names=['priya','thulasi','charan','venkatadri']">
+	<ul>
+		<li ng-repeat="a in names">
+			{{a }}
+		</li>
+	</ul>
+</div> -->
+<!-- <div ng-app="" ng-init="names=[{name:'priya',country:'india'},{name:'thulasi',country:'uk'},{name:'charan',country:'us'}]">
+	<ul>
+		<li ng-repeat="a in names">
+			{{a.name+ ','+ 	a.country }}
+		</li>
+	</ul>
+</div> -->
+
+<!-- <div ng-app="myapp" www-fb-com></div>
+ -->
+<script>
+var app = angular.module("myApp", []);
+app.directive("wwwFbCom", function() {
+    return {
+        template : "<h1>Made by a directive!</h1>"
+    };
+});
+</script>
+
+</body>
+
+</html>

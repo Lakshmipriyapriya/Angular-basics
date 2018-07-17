@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Internal Services
+	</title>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+<script src="../bootstrap/js/jquery.min.js"></script>
+	<script src="../angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="newctrl">
+ 	{{setTime}}
+ </div>
+ <script>
+ 	var app=angular.module('myApp',[]);
+ 	app.controller('newctrl',function($scope,$interval){
+ 		$scope.setTime= new Date().toLocaleTimeString();
+ 		$interval(function(){
+ 			$scope.setTime= new Date().toLocaleTimeString();
+ 		},2000);
+ 	});
+ </script> 
+</body>
+</html>
