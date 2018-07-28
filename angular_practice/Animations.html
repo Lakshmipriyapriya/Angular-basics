@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Animations
+	</title>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<script src="./bootstrap/js/jquery.min.js"></script>
+	<script src="./angular.min.js"></script>
+	<script src="./angular-animate.js"></script>
+	<style>
+	div {
+  transition: all linear 0.5s;
+  background-color: skyblue;
+  height: 100px;
+  width: 100%;
+  position: relative; 
+}
+.ng-hide {
+  background-color: transparent;
+  top:-200px;
+  left: 200px;
+}
+</style>
+</head>
+<body ng-app="myApp">
+	<input type="checkbox"  ng-model="checkout">
+	<div ng-hide="checkout"></div>
+	<script>
+		var app=angular.module('myApp',['ngAnimate'])
+	</script>
+
+
+</body>
+</html>

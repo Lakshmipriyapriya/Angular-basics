@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		EVENTS Example
+	</title>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<script src="./bootstrap/js/jquery.min.js"></script>
+	<script src="./angular.min.js"></script>
+</head>
+<body>
+	<!-- <div ng-app="myApp" ng-controller="newctrl">
+		<h1 ng-mousemove="length=length+1">mouse over to increase your count length</h1>
+	{{length}}
+	</div>
+	<script>
+		var app=angular.module('myApp',[]);
+		app.controller('newctrl',function($scope){
+			$scope.length=0;
+		})
+	</script> -->
+	<!-- <div ng-app="myApp" ng-controller="newctrl">
+		<h1 ng-click="length=length+1">mouse over to increase your count length</h1>
+	{{length}}
+	</div>
+	<script>
+		var app=angular.module('myApp',[]);
+		app.controller('newctrl',function($scope){
+			$scope.length=0;
+		})
+	</script>n
+ -->
+ <div ng-app="myApp" ng-controller="newctrl">
+ 	<button ng-click= myclick()>click me!</button>
+ 	<div ng-show="menuitems">
+ 		<h3>Departments</h3>
+ 		<div>IT</div>
+ 		<div>CSE</div>
+ 		<div>ECE</div>
+ 		<div>Civil</div>
+ 		<div>mech</div>
+ 		<div>EEE</div>
+ </div>
+ <script>
+ 	var app=angular.module('myApp',[]);
+ 	app.controller('newctrl',function($scope){
+ 		$scope.menuitems=false;
+ 		$scope.myclick=function(){
+ 		$scope.menuitems=!$scope.menuitems;
+
+ 		}
+ 	})
+ </script>
+
+</body>
+</html>

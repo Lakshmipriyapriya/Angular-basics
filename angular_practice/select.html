@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Select
+	</title>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+<script src="./bootstrap/js/jquery.min.js"></script>
+	<script src="./angular.min.js"></script>
+</head>
+<body>
+	<div ng-app='myApp' ng-controller='myctrl'>
+		
+		<!--  <select ng-model="selectNames" ng-options="x in  names">
+			
+		</select>  -->
+	
+	<select ng-model="selectNames" >
+		<option ng-repeat="x  in names">{{x.names}</option>
+		
+	</select>
+	</div>
+	<script>
+		var app=angular.module('myApp',[])
+		app.controller('myctrl',function($scope){
+			// $scope.names=[{name:"priya",department:"IT"},
+			// {name:"charan",department:"cse"},
+			// {name:"thulasi",department:"ece"},
+			// {name:"venkatadri",department:"civil"},
+			// {name:"praba",department:"mech"}];
+			$scope.names={
+			name:"priya",
+			name:"charan"
+		}
+		})
+	</script>
+
+
+</body>
+</html>
